@@ -1,654 +1,314 @@
 <div align="center">
 
-# TangRhythm · 唐韵
+<img src="docs/screenshots/home.png" alt="TangRhythm Banner" width="100%"/>
 
-### Digital Humanities · 唐诗知识宇宙 · AI 教学 · Data Visualization
+<br/>
+
+<img src="https://img.shields.io/badge/Project-TangRhythm-8A2BE2?style=for-the-badge&logo=github&logoColor=white" alt="Project Badge"/>
+<img src="https://img.shields.io/badge/Status-Phase%203%20Complete-success?style=for-the-badge&logo=vercel&logoColor=white" alt="Status Badge"/>
+<img src="https://img.shields.io/badge/Version-v1.0.0-FF6B6B?style=for-the-badge&logo=semver&logoColor=white" alt="Version Badge"/>
+<img src="https://img.shields.io/badge/Last%20Updated-2026.08-00C2A8?style=for-the-badge&logo=clockify&logoColor=white" alt="Updated Badge"/>
+
+<br/>
+<br/>
+
+<h1> 🎐 TangRhythm · 唐韵 </h1>
+<h3> 让千年文字，在数字时代重新律动 </h3>
 
 <p>
-  <strong>把《唐诗三百首》从静态文本，变成可以搜索、理解、分析、探索与学习的数字知识宇宙。</strong>
+  <strong>Digital Humanities</strong> · <strong>AI Education</strong> · <strong>Knowledge Graph</strong> · <strong>Data Visualization</strong>
 </p>
 
 <p>
-  <a href="#-项目愿景">项目愿景</a> ·
-  <a href="#-核心能力">核心能力</a> ·
-  <a href="#-产品体验">产品体验</a> ·
-  <a href="#-技术架构">技术架构</a> ·
-  <a href="#-快速开始">快速开始</a>
+  一个以《唐诗三百首》为基石、基于 <b>Next.js 15</b> 构建的唐诗知识宇宙。<br/>
+  我们不止于把典籍搬上网页，而是重新设计「人理解经典」的方式——<br/>
+  将静态文本，升维为 <b>可探索、可学习、可理解</b> 的数字人文智慧系统。
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/Next.js-15.4.0-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/TypeScript-Enabled-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Digital%20Humanities-Project-8B5CF6?style=for-the-badge" alt="Digital Humanities" />
-  <img src="https://img.shields.io/badge/AI%20Teacher-Enabled-111827?style=for-the-badge" alt="AI Teacher" />
-  <img src="https://img.shields.io/badge/Status-Phase%203%20Complete-10B981?style=for-the-badge" alt="Phase 3" />
+  <a href="#-项目愿景--vision">愿景</a> •
+  <a href="#-核心特性--features">特性</a> •
+  <a href="#-产品预览--preview">预览</a> •
+  <a href="#-技术架构--architecture">架构</a> •
+  <a href="#-快速开始--quick-start">开始</a> •
+  <a href="#-路线图--roadmap">路线</a>
+</p>
+
+<br/>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-15.4.0-black?style=flat-square&logo=nextdotjs" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-Strict-blue?style=flat-square&logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=flat-square&logo=tailwindcss" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Recharts-DataViz-FF4F64?style=flat-square" alt="Recharts" />
+  <img src="https://img.shields.io/badge/Mermaid-Diagrams-FF4F64?style=flat-square" alt="Mermaid" />
+  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker" alt="Docker" />
+  <img src="https://img.shields.io/badge/FastAPI-Planned-009688?style=flat-square&logo=fastapi" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Neo4j--pgvector-Planned-4DB33D?style=flat-square&logo=neo4j" alt="Graph" />
 </p>
 
 </div>
 
 ---
 
-## ✦ 项目一句话
+## 📑 目录 · Contents
 
-**TangRhythm（唐韵）不是一个普通的古诗词展示网站。**
-
-它试图回答一个更大的问题：
-
-> **当经典文学进入数字时代，我们能不能不只是“把书搬到网页上”，而是重新设计人理解经典的方式？**
-
-TangRhythm 以《唐诗三百首》为核心语料，把诗歌文本、作者、主题、情绪、意象、地理空间、语义关系、AI 解释与学习行为连接起来，形成一套面向学生、家长与教师的 **Digital Humanities（数字人文）+ AI Education（智能教育）+ Data Visualization（数据可视化）** 体验。
-
-它的目标不是让古诗“更像软件”，而是让软件成为理解古诗的另一种入口。
-
----
-
-## ✦ 项目数据
-
-| 指标 | 当前规模 | 说明 |
-|---|---:|---|
-| 诗歌 | **300** | 《唐诗三百首》核心诗歌语料 |
-| 诗人 | **77** | 诗人及作者关联信息 |
-| 主题 | **24** | 主题维度与内容分类 |
-| 语义关系 | **1268** | 诗歌、主题与概念之间的关系 |
-| Web 技术栈 | **Next.js 15.4.0** | 现代 React 全栈 Web 框架 |
-| TypeScript | **Enabled** | 类型安全与工程化开发 |
-
-> 数据规模与页面展示以当前项目 Phase 3 版本为准。
+- [项目初衷 · Vision](#-项目初衷--vision)
+- [为什么是 TangRhythm · Why Us](#-为什么是-tangrhythm--why-us)
+- [项目数据 · Corpus](#-项目数据--corpus)
+- [核心特性 · Features](#-核心特性--features)
+- [产品预览 · Preview](#-产品预览--preview)
+- [技术架构 · Architecture](#-技术架构--architecture)
+- [快速开始 · Quick Start](#-快速开始--quick-start)
+- [路线图 · Roadmap](#-路线图--roadmap)
+- [贡献指南 · Contributing](#-贡献指南--contributing)
+- [许可证 · License](#-许可证--license)
 
 ---
 
-# ✦ 项目愿景
+## 💫 项目初衷 · Vision
 
-## 从“背诗”走向“理解诗”
+> <b>“我们能否不止把书搬到网页上，而是重新设计人理解经典的方式？”</b>
 
-传统古诗学习通常围绕三个动作展开：
+TangRhythm（唐韵）不是一个普通的古诗词展示网站。它试图回应一个数字人文的时代命题：
 
-**读 → 背 → 考。**
+**当经典文学遇见现代技术，除了数字化存储，我们还能做什么？**
 
-而 TangRhythm 希望增加第四个动作：
+我们以《唐诗三百首》为基石，构建了一张连接 **诗歌 · 诗人 · 地理 · 意象 · 情感** 的知识图谱；将传统的「读—背—考」单向模式，重构为 **「连接—理解—探索」** 的认知闭环。在这里，每一首诗都不是孤立的文本，而是一个可被检索、可被关联、可被理解的知识节点。
 
-**连接。**
-
-一首诗不再只是孤立的一段文字，而是一个知识节点：它可以连接诗人、时代、地域、主题、情绪、意象、名句、相似作品与学习路径。
-
-例如，一句“感时花溅泪”，不仅可以解释“拟人”，还可以进一步进入杜甫的时代背景、诗人的情绪状态、景与情之间的关系，以及“移情”在古典诗歌中的表达机制。
-
-TangRhythm 想做的，就是把这些原本散落在教材、注释、课堂和人的经验里的关联，重新组织成一个可探索的数字知识系统。
+我们相信：**技术的终点不是取代人文，而是让人文被更多人真正看见。**
 
 ---
 
-# ✦ 为什么叫 TangRhythm？
+## 🌟 为什么是 TangRhythm · Why Us
 
-**Tang**：唐诗，代表项目最核心的文化语料。
+在众多古诗网站中，TangRhythm 选择了一条更难、却更有价值的路：
 
-**Rhythm**：节律、韵律，也代表诗歌本身的声音、节奏、情绪与时间感。
+| 维度 | 传统古诗网站 | TangRhythm 唐韵 |
+| :--- | :--- | :--- |
+| **内容形态** | 线性文本陈列 | 知识图谱驱动的结构化语料 |
+| **阅读体验** | 静态浏览 | 逐句释义 + 语义关联网络 |
+| **数据价值** | 不可计算 | 主题 / 情绪 / 意象 / 地理多维可分析 |
+| **教学范式** | 标准答案灌输 | 分层认知（小学→教师）的思维引导 |
+| **学习闭环** | 读完即止 | 阅读 → 记忆 → 测验 → 反馈 → Mastery |
+| **工程底座** | 单页静态 | 全栈可扩展（Next.js + 向量检索 + 图谱） |
 
-所以 TangRhythm 并不只是“唐诗数据库”的意思。
-
-它更像是一种隐喻：
-
-> **让千年前的文字，在今天重新产生可被阅读、理解、连接与学习的节律。**
-
----
-
-# ✦ 核心能力
-
-## 01 · Poetry Corpus
-### 一套真正可以探索的唐诗语料库
-
-TangRhythm 以《唐诗三百首》为核心内容入口，将诗歌由静态文本转化为结构化知识对象。
-
-你可以围绕诗歌进行：
-
-- 全文阅读与逐句理解
-- 诗人探索
-- 主题关联
-- 名句发现
-- 内容检索
-- 诗歌之间的知识关系探索
-
-目标并不是做一个“诗歌列表”，而是建立一个能够持续扩展的文学知识底座。
+**TangRhythm 不生产答案，它培养理解力。**
 
 ---
 
-## 02 · Explore
-### 让数据重新讲一遍唐诗
+## 📊 项目数据 · Corpus
 
-如果我们把诗歌当作数据，会发现文学作品同样可以形成非常迷人的结构。
+TangRhythm 不只是一行行代码，更是一个**结构化的文学知识底座**——每一份数据都经过建模、关联与可计算化处理。
 
-TangRhythm 将唐诗映射到多个分析维度：
+<div align="center">
 
-### 主题分布
-观察《唐诗三百首》中不同主题的分布，让“山水、离愁、战争、羁旅、怀古”等传统文学概念获得可视化表达。
+| 📚 核心语料 | 👤 诗人网络 | 🌐 语义关系 | 🏷️ 主题维度 |
+| :---: | :---: | :---: | :---: |
+| **300** 首唐诗 | **77** 位诗人 | **1268** 条关联 | **24** 个主题分类 |
 
-### 情绪画像
-尝试把诗歌中的情绪线索从文本中抽离出来，让“悲、喜、思、愁、怀、怨”等情感成为可以被观察的结构。
+</div>
 
-### 唐诗地图
-从长安到江南，从塞北到江南水乡，让诗歌沿着真实地理空间流动。
+<div align="center">
 
-文学因此不再只是“读”，也可以被“定位”。
+> 覆盖初唐至晚唐近三百年文脉 · 平均每位诗人构建 **16+** 条语义关联  
+> 数据以「来源可溯源、内容可校验」为第一原则，结构化呈现而非堆砌。
 
-### 意象网络
-月、酒、山、水、雁、舟……
-
-这些高频而具有文化意味的意象彼此连接，形成一种属于唐诗自己的语义网络。
+</div>
 
 ---
 
-## 03 · AI Teacher
-### 不只是解释，而是教你理解
+## ✨ 核心特性 · Features
 
-TangRhythm 的 AI Teacher 设计不是简单接入一个聊天机器人，而是围绕“教学”重新组织回答。
+TangRhythm 由四大支柱构成，从语料底座到智能教学，形成完整的数字人文产品矩阵。
 
-系统希望综合：
+### 🎨 01. Poetry Corpus · 语料库
+一套真正「可以探索」的唐诗知识底座。我们将诗歌文本转化为结构化对象，让每一次阅读都成为一次发现。
 
-**诗歌文本 + 上下文 + 作者资料 + 历史背景 + 学习者年龄 + 学习目标**
+- **📖 深度阅读**：逐句释义、平仄韵脚、结构化呈现，告别 plain text。
+- **🔗 知识关联**：一键连接诗人、时代、背景与相关作品，织成语义网络。
+- **🔍 智能检索**：基于语义的内容发现，从「找一首诗」到「找一种情绪」。
+- **🏛️ 作者宇宙**：以诗人为主线，串联其生平、交游与代表作。
 
-再生成更合适的解释方式。
+### 🗺️ 02. Explore · 数据叙事
+让数据重新讲一遍唐诗。透过数据科学的视角，重新审视文学的内在结构。
 
-同一首诗，对不同学习阶段的人，不应该只有同一个答案。
+- **📊 主题分布**：可视化呈现山水、边塞、怀古、闺怨等文学母题的版图。
+- **🧠 情绪画像**：从文本中抽离悲、喜、愁、怨，构建可量化的情绪图谱。
+- **🌍 唐诗地图**：从长安到边塞，在地理空间中定位每一首诗的来处与去向。
+- **🌌 意象网络**：月、酒、雁、舟——揭示唐诗独有的语义共现与象征体系。
 
-因此项目设计了多层教学模式：
+### 🤖 03. AI Teacher · 智能教师
+不只是解释答案，而是**教会理解的方法**。基于多模态大模型，构建分层教学模式。
 
-| 模式 | 核心目标 |
-|---|---|
-| 小学模式 | 让孩子先读懂、看见画面与故事 |
-| 初中模式 | 建立基础的诗歌鉴赏框架 |
-| 高中模式 | 强化意象、手法、结构与情感分析 |
-| 深度模式 | 进入文学史、文本细读与跨作品关联 |
-| 教师模式 | 提供更适合备课与教学组织的内容 |
+- **🧩 分层教学**：小学 / 初中 / 高中 / 深度 / 教师 五档认知水平自适应。
+- **🏛️ 背景融合**：结合历史语境与作者生平，让诗意从时代中自然浮现。
+- **💡 思维引导**：从「拟人」到「移情」，搭建可迁移的文学鉴赏框架。
+- **📚 引文可溯**：回答附带来源引用，拒绝「一本正经地编造」。
 
-### 一个典型示例
+### 📈 04. Learning · 学习闭环
+让学习结果「被看见」。构建完整的认知飞轮，把被动阅读转化为主动掌握。
 
-> **为什么“感时花溅泪”会把花写得像人在流泪？**
+> 阅读 → 理解 → 记忆 → 测试 → 反馈 → Mastery Score
 
-TangRhythm 不停在“这是拟人”的答案上，而进一步解释：诗人的悲痛投射到眼前花鸟之中，景物因此被赋予人的情感，让景与情真正发生融合。
-
-这正是 TangRhythm 与普通诗词问答工具最大的区别之一：
-
-> **解释答案，不如教会理解方法。**
-
----
-
-# ✦ 学习系统
-
-## 阅读 → 掌握 → 成长
-
-TangRhythm 不希望学习停留在“看完一首诗”。
-
-因此项目进一步构建了学习闭环：
-
-```text
-        阅读
-         │
-         ▼
-      理解诗歌
-         │
-         ▼
-      记忆训练
-         │
-         ▼
-      测试与填空
-         │
-         ▼
-      错题反馈
-         │
-         ▼
-    间隔复习 / 巩固
-         │
-         ▼
-    Mastery Score
-         │
-         └──────────→ 回到学习
-```
-
-### Reading
-逐句解释、结构化阅读、名句收藏与作者探索。
-
-### Mastery
-通过背诵、填空、测试、错题与间隔复习强化长期记忆。
-
-### Growth
-通过 **Mastery Score** 观察自己的学习轨迹，而不是只看一次测试成绩。
-
-这意味着古诗词学习被重新理解成一个可以持续迭代的过程。
-
----
-
-# ✦ 产品体验
-
-## 首页 · 让文学第一次拥有“知识宇宙”的入口
-
-当前首页围绕四条核心产品路径组织：
-
-**诗歌 · 探索 · AI 老师 · 学习**
-
-首页通过数据指标建立项目的第一印象，再逐步进入主题分布、情绪画像、地图、意象网络与 AI Teacher。
-
-核心文案：
-
-> **一卷唐诗，读见千年风华。**
-
-它并不是一句装饰性的 Slogan，而是整个产品体验的设计方向：
-
-**先阅读，再探索；先理解，再学习；从一首诗，进入一个时代。**
-
----
-
-# ✦ 信息架构
-
-```text
-TangRhythm
-│
-├── Poetry
-│   ├── 诗歌浏览
-│   ├── 阅读与解释
-│   ├── 作者探索
-│   └── 作品关系
-│
-├── Explore
-│   ├── 主题分布
-│   ├── 情绪画像
-│   ├── 唐诗地图
-│   └── 意象网络
-│
-├── AI Teacher
-│   ├── 小学模式
-│   ├── 初中模式
-│   ├── 高中模式
-│   ├── 深度模式
-│   └── 教师模式
-│
-└── Learning
-    ├── 背诵
-    ├── 填空
-    ├── 测试
-    ├── 错题
-    ├── 间隔复习
-    └── Mastery Score
+```mermaid
+graph LR
+    A[📖 阅读 Reading] --> B[🧠 理解 Understanding]
+    B --> C[📝 记忆训练 Memorizing]
+    C --> D[❓ 测试 Quiz]
+    D --> E[🛠️ 错题反馈 Feedback]
+    E --> F[📈 Mastery Score]
+    F -.->|闭环迭代| A
 ```
 
 ---
 
-# ✦ 技术架构
+## 🖼️ 产品预览 · Preview
 
-TangRhythm 的工程目标不是“能跑就行”，而是尽可能靠近现代 Web 产品的组织方式。
+<div align="center">
+
+| 🏠 首页 · 知识宇宙入口 | 📖 诗歌 · 深度阅读体验 |
+| :---: | :---: |
+| <img src="docs/screenshots/home.png" alt="Home" width="400"/> | <img src="docs/screenshots/poetry.png" alt="Poetry" width="400"/> |
+
+| 🌐 探索 · 数据可视化 | 🤖 AI Teacher · 智能教学 |
+| :---: | :---: |
+| <img src="docs/screenshots/explore.png" alt="Explore" width="400"/> | <img src="docs/screenshots/ai-teacher.png" alt="AI Teacher" width="400"/> |
+
+</div>
+
+---
+
+## 🏗️ 技术架构 · Architecture
+
+TangRhythm 采用现代全栈 Web 架构，在「体验流畅」与「工程可维护」之间追求平衡。前端以 Next.js 15 App Router 构建沉浸式交互，后端预留 FastAPI + PostgreSQL/pgvector + Neo4j 的可扩展数据层。
 
 ```mermaid
 flowchart TB
-    U[学生 / 家长 / 教师]
-    WEB[Next.js Web App]
-    UI[UI / Components]
-    DATA[Poetry Knowledge Layer]
-    VIZ[Data Visualization]
-    AI[AI Teacher]
-    LEARN[Learning Engine]
-    API[Backend / API]
-    DB[(Structured Data)]
+    User([👨‍🎓 学生 / 教师])
 
-    U --> WEB
-    WEB --> UI
-    WEB --> VIZ
-    WEB --> AI
-    WEB --> LEARN
-    UI --> DATA
-    VIZ --> DATA
-    AI --> API
-    LEARN --> API
+    subgraph Frontend[Next.js 15 · App Router]
+        UI[UI Components]
+        Viz[Data Viz Layer]
+        Learn[Learning Engine]
+    end
+
+    subgraph Backend[Services · Planned / Hybrid]
+        API[API Layer · FastAPI]
+        AI[AI Teacher Core · RAG]
+        DB[(Structured Data · pgvector / Neo4j)]
+    end
+
+    User --> Frontend
+    Frontend --> API
+    API --> AI
     API --> DB
+    Viz --> DB
+    Learn --> API
 ```
 
-## 当前技术栈
-
-| 层级 | 技术 / 方案 |
-|---|---|
-| Frontend | **Next.js 15.4.0** |
-| Language | **TypeScript** |
-| Styling / UI | React / Next.js 组件化体系 |
-| Data | 结构化诗歌与知识关系数据 |
-| Visualization | Web 可视化体系，可承载主题、情绪、地图、网络等分析视图 |
-| AI | AI Teacher 教学层 |
-| Backend | 项目内置 backend / API 结构 |
-| Deployment / Services | Docker Compose 支持 |
-| Quality | tests / typed configuration / modular structure |
-
----
-
-# ✦ Repository Structure
+### 📁 项目结构 · Structure
 
 ```text
 TangRhythm/
-│
-├── app/                    # Next.js 应用与页面入口
-├── components/             # 可复用 UI 组件
-├── lib/                    # 核心逻辑与工具层
-├── data/                   # 唐诗与知识数据
-├── backend/                # 后端 / API 相关能力
-├── docs/                   # 项目文档
-├── skills/                 # AI / 项目能力模块
-├── tests/                  # 测试
-│
-├── TangRhythm-Phase3-Overlay/  # Phase 3 增强层
-├── APPLY_PHASE3.ps1            # Phase 3 应用脚本
-├── PHASE3.md                   # Phase 3 说明
-├── package.json
-├── next.config.ts
-├── tsconfig.json
-├── docker-compose.yml
-└── README.md
+├── app/           # Next.js 页面路由（App Router）
+├── components/    # UI 组件库（Oriental Design System）
+├── lib/           # 核心逻辑层（检索 / 图谱 / 学习引擎）
+├── data/          # 唐诗结构化语料与知识图谱
+├── backend/       # 后端服务与 API（FastAPI，可扩展）
+├── skills/        # AI 能力模块（分层讲诗 / RAG Pipeline）
+└── tests/         # 测试用例与数据校验
 ```
 
----
+### ⚙️ 工程亮点 · Engineering Highlights
 
-# ✦ 快速开始
-
-## 1. 环境要求
-
-建议环境：
-
-- Node.js **LTS**
-- npm
-- Windows / macOS / Linux
-- Docker（如需运行 backend 服务）
+- **前端优先，优雅降级**：未配置后端时自动回退至本地示例语料，产品永远可运行。
+- **检索优先，引用为本**：AI Teacher 在缺失 LLM Key 时进入 retrieval-only 模式，**绝不编造答案**。
+- **数据可溯源**：导入脚本保留来源 URL 与 SHA256，将「教育增强内容」与「原文」严格分离。
+- **可扩展底座**：词汇检索 + 知识分块 + 向量语义检索（pgvector）平滑衔接，面向生产演进。
 
 ---
 
-## 2. 克隆项目
+## 🚀 快速开始 · Quick Start
 
+请确保开发环境已安装 **Node.js LTS** 与 **npm**（推荐 Node 22+）。
+
+### 1. 克隆项目
 ```bash
 git clone https://github.com/Aventardo7777/TangRhythm.git
 cd TangRhythm
 ```
 
----
-
-## 3. 安装依赖
-
+### 2. 安装依赖
 ```bash
 npm install
 ```
 
----
-
-## 4. 启动开发环境
-
+### 3. 启动开发服务器
 ```bash
 npm run dev
 ```
+访问 `http://localhost:3000` 即可进入唐诗知识宇宙。
 
-浏览器访问：
-
-```text
-http://localhost:3000
-```
-
----
-
-## 5. 启动后端服务（可选）
-
-如果需要运行项目后端 / 服务依赖：
-
+### 4. 高级配置 · Docker 全栈部署
+如需运行完整的后端与 AI Teacher 服务：
 ```bash
+cp backend/.env.example backend/.env
 docker compose up --build
 ```
-
----
-
-# ✦ Windows / PowerShell 提示
-
-如果 PowerShell 的执行策略阻止脚本运行，可在当前终端会话中使用：
-
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
+数据库就绪后导入语料：
+```bash
+docker compose exec api python scripts/import_tang_poetry.py
 ```
 
-然后再执行项目脚本。
-
-> 该命令只影响当前 PowerShell 进程，不会永久修改系统策略。
+> **Windows PowerShell 提示**：若脚本执行受限，请在终端运行 `Set-ExecutionPolicy -Scope Process Bypass` 后重试。
 
 ---
 
-# ✦ Phase 3
+## 🗓️ 路线图 · Roadmap
 
-Phase 3 是项目从“内容型网站”向“数字人文产品”进一步升级的重要阶段。
+TangRhythm 正在持续演进——从语料底座，走向真正的智能。
 
-当前 Phase 3 已包括：
-
-- 更完整的首页产品表达
-- Poetry 内容入口
-- Explore 数据叙事入口
-- AI Teacher 产品入口
-- Learning 学习闭环表达
-- 主题 / 情绪 / 地图 / 意象网络等数字人文方向
-- Phase 3 Overlay 的模块化更新方式
-
-Phase 3 的核心思想可以概括为：
-
-> **Content → Knowledge → Visualization → AI → Learning**
-
-也就是让内容逐渐变成知识，让知识变成关系，让关系变成可视化，让可视化进入 AI 教学，再让教学回到学习行为。
+- [x] **Phase 1 · Corpus**：核心语料库构建与工程骨架。
+- [x] **Phase 2 · Knowledge**：知识图谱关系建立与数据层增强（pgvector / FastAPI）。
+- [x] **Phase 3 · Product**：完整产品化体验、AI Teacher 与可视化叙事。
+- [ ] **Future · Intelligence**：
+  - [ ] RAG 知识检索体系增强与多源融合
+  - [ ] 动态地理空间交互地图（GIS 级唐诗时空漫游）
+  - [ ] 个性化学习路径推荐算法（自适应 Mastery）
+  - [ ] 宋词 / 元曲 文学宇宙扩展
 
 ---
 
-# ✦ 数字人文价值
+## 🤝 贡献指南 · Contributing
 
-TangRhythm 的核心创新，并不是“给唐诗换一个好看的网页”。
+我们欢迎对数字人文、教育科技、知识图谱感兴趣的开发者与研究者共同参与。
 
-它尝试完成的是一次媒介转换：
+1. **Fork** 本仓库。
+2. 创建特性分支：`git checkout -b feature/AmazingFeature`。
+3. 提交更改：`git commit -m 'Add some AmazingFeature'`。
+4. 推送分支：`git push origin feature/AmazingFeature`。
+5. 提交 **Pull Request**。
 
-```text
-传统文学
-   ↓
-数字化文本
-   ↓
-结构化知识
-   ↓
-关系网络
-   ↓
-可视化探索
-   ↓
-AI 解释与教学
-   ↓
-个性化学习
-```
-
-这意味着同一首诗可以拥有完全不同的进入方式：
-
-**文学入口**：读诗、品句、理解意境。
-
-**数据入口**：主题、情绪、意象、作者、地点。
-
-**AI 入口**：向 AI Teacher 提问。
-
-**教育入口**：背诵、测试、错题、复习、掌握度。
-
-**知识图谱入口**：从一首诗走向另一个诗人、一个主题、一处地理空间或一个意象。
-
-这正是 TangRhythm 想构建的“知识宇宙”。
-
----
-
-# ✦ 面向谁？
-
-## 学生
-
-让“背过”变成“真正理解”。
-
-从小学启蒙到高中鉴赏，再到更深层次的文学分析，可以根据不同学习阶段切换解释方式。
-
-## 家长
-
-让古诗词学习从单纯监督背诵，变成可以观察、理解与陪伴的学习过程。
-
-## 教师
-
-提供更适合课堂辅助、诗歌解释、知识组织与内容探索的数字工具。
-
-## 文学与数字人文研究者
-
-提供一个进一步实验文学数据化、语义关系、文本分析和可视化呈现的开放式基础。
-
----
-
-# ✦ 设计原则
-
-### 01 · 经典内容，现代交互
-
-不改变古诗本身的文学价值，但改变用户进入古诗的方式。
-
-### 02 · 数据服务文学，而不是替代文学
-
-可视化不是为了制造“漂亮图表”，而是帮助人看到文本背后的结构。
-
-### 03 · AI 服务理解，而不是代替思考
-
-AI Teacher 的目标不是替学生完成作业，而是帮助学生建立理解框架。
-
-### 04 · 学习结果，应该能够被看见
-
-通过 Mastery Score 等机制，让学习从一次性的完成，变成可观察、可持续的成长。
-
----
-
-# ✦ Roadmap
-
-> 以下为项目演进方向，不代表所有项目已完成。
-
-### Phase 1 · Corpus
-
-- [x] 核心诗歌语料组织
-- [x] 基础内容结构
-- [x] 项目工程骨架
-
-### Phase 2 · Knowledge
-
-- [x] 诗歌 / 诗人 / 主题等关系组织
-- [x] 项目数据层增强
-- [x] 数字人文方向确定
-
-### Phase 3 · Product
-
-- [x] 首页产品化
-- [x] Poetry 入口
-- [x] Explore 入口
-- [x] AI Teacher 入口
-- [x] Learning 入口
-- [x] 数据叙事与产品视觉统一
-
-### Future · Intelligence
-
-- [ ] 更完整的 RAG 知识检索体系
-- [ ] 更细粒度的诗歌语义关系
-- [ ] 动态情绪与主题分析
-- [ ] 地理空间交互地图增强
-- [ ] 意象共现网络动态探索
-- [ ] 个性化学习推荐
-- [ ] 更完整的掌握度模型
-- [ ] 面向教师的备课与课堂工具
-- [ ] 多模态 AI 教学体验
-
----
-
-# ✦ 项目截图
-
-> 建议将真实项目截图放入 `docs/screenshots/`，再替换下面的占位路径。
-
-### 首页
-
-![TangRhythm Home](docs/screenshots/home.png)
-
-### 唐诗探索
-
-![TangRhythm Poetry](docs/screenshots/poetry.png)
-
-### 数据可视化
-
-![TangRhythm Explore](docs/screenshots/explore.png)
-
-### AI Teacher
-
-![TangRhythm AI Teacher](docs/screenshots/ai-teacher.png)
-
-### 学习系统
-
-![TangRhythm Learning](docs/screenshots/learning.png)
-
----
-
-# ✦ Demo
-
-本地启动：
-
-```text
-http://localhost:3000
-```
-
-核心页面：
-
-| 页面 | 地址 |
-|---|---|
-| 首页 | `/` |
-| 唐诗 | `/poetry` |
-| AI 老师 | `/ai` |
-| 探索 | `/#explore` |
-| 学习 | `/#learning` |
-
----
-
-# ✦ Why This Project Matters
-
-互联网已经非常擅长保存信息。
-
-搜索引擎可以找到一首诗，电子书可以展示一首诗，百科可以解释一首诗，AI 也可以回答一首诗。
-
-但这些能力仍然经常是彼此分离的。
-
-**TangRhythm 想做的是把它们重新连接起来。**
-
-让一首诗既是文本，又是知识节点；既能被阅读，又能被探索；既能被解释，又能进入学习系统；既属于唐代，也能够通过数字技术进入今天的教育场景。
-
-所以 TangRhythm 最终想呈现的并不是“三百首诗”。
-
-而是：
-
-> **三百首诗背后，一整套关于中国古典文学的数字知识结构。**
-
----
-
-# ✦ Contributing
-
-欢迎对 TangRhythm 的数据、文学内容、可视化、AI 教学、工程实现与教育产品设计提出建议或贡献。
-
-建议贡献流程：
-
-```text
-git checkout -b feature/your-feature
-# make changes
-npm test
-npm run dev
-git commit -m "feat: your feature"
-git push origin feature/your-feature
-```
-
-欢迎通过 Issue / Pull Request 讨论新的数据模型、交互想法与教学模式。
-
----
-
-# ✦ License
-
-当前仓库以项目根目录中的 `LICENSE` 文件为准。
-
-如果你计划进一步开放数据集、模型提示词或教学内容，建议为软件代码、文学数据与衍生知识库分别建立清晰的授权边界。
+> 我们尤其欢迎：语料校验、知识图谱补全、可视化创新与教学场景设计。
 
 ---
 
 <div align="center">
 
-## TangRhythm · 唐韵
+## 📜 许可证 · License
 
-**让古诗词不只是被背下来，而是被真正理解。**
+本项目依据仓库根目录 `LICENSE` 文件进行授权。
 
-`Tang Poetry · AI · Data · Learning`
+---
+
+<br/>
+
+**TangRhythm · 唐韵**
+
+> <b>一卷唐诗，读见千年风华。</b>
+
+Made with ❤️ by [Aventardo7777](https://github.com/Aventardo7777)
 
 </div>
