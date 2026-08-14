@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --ink: #1f2421;
+  --muted: #68706a;
+  --paper: #f7f3ea;
+  --paper-2: #efe9dc;
+  --jade: #365d52;
+  --jade-soft: #dfe8df;
+  --vermilion: #9f4638;
+  --gold: #b28a45;
+  --line: rgba(31,36,33,.12);
+}
+* { box-sizing: border-box; }
+body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,system-ui,sans-serif; }
+.serif { font-family:"Noto Serif SC",serif; }
+.paper-grid {
+  background-image: linear-gradient(rgba(54,93,82,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(54,93,82,.025) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+::selection { background: #d6dfd5; }

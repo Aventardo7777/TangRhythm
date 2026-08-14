@@ -1,0 +1,22 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: tangrhythm
+      POSTGRES_PASSWORD: tangrhythm
+      POSTGRES_DB: tangrhythm
+    ports:
+      - "5432:5432"
+    volumes:
+      - tangrhythm_pg:/var/lib/postgresql/data
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+asyncpg://tangrhythm:tangrhythm@db:5432/tangrhythm
+      CORS_ORIGINS: http://localhost:3000
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+volumes:
+  tangrhythm_pg:

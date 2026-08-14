@@ -1,0 +1,32 @@
+{
+  "poem": {
+    "id": "string",
+    "title": "string",
+    "author": "string",
+    "dynasty": "string",
+    "genre": "string",
+    "content": "string",
+    "paragraphs": "string[]",
+    "translation": "string",
+    "annotation": "string",
+    "background": "string",
+    "appreciation": "string",
+    "theme": "string[]",
+    "emotion": "string[]",
+    "imagery": "string[]",
+    "literary_devices": "string[]",
+    "famous_lines": "string[]",
+    "keywords": "string[]",
+    "difficulty": "beginner|intermediate|advanced",
+    "school_stage": "string[]",
+    "related_poems": "string[]",
+    "related_authors": "string[]",
+    "locations": "string[]",
+    "historical_events": "string[]",
+    "teaching_points": "string[]",
+    "exam_points": "string[]",
+    "memory_tips": "string[]",
+    "questions": "string[]",
+    "sources": "object[]"
+  }
+}
